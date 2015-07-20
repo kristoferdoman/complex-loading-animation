@@ -14,14 +14,14 @@ class RectangleLayer: CAShapeLayer {
         super.init()
         fillColor = Colors.clear.CGColor
         lineWidth = 5.0
-        path = rectanglePathFull().CGPath
+        path = rectanglePathFull.CGPath
     }
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func rectanglePathFull() -> UIBezierPath {
+    var rectanglePathFull: UIBezierPath {
         var rectanglePath = UIBezierPath()
         rectanglePath.moveToPoint(CGPoint(x: 0.0, y: 100.0))
         rectanglePath.addLineToPoint(CGPoint(x: 0.0, y: -lineWidth))
